@@ -98,53 +98,10 @@ class Midterm(object):
             except:
                 print("mkdir error")
     @cherrypy.expose
-    def index(self, N=20 ,N1=20 , M=4, P=20,midx=400):
+    def index(self):
         outstring = '''
-    <!DOCTYPE html> 
-    <html>
-    <head>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8">
-    <!-- 載入 brython.js -->
-    <script type="text/javascript" src="/static/Brython3.1.1-20150328-091302/brython.js"></script>
-    <script src="/static/Cango2D.js" type="text/javascript"></script>
-    <script src="/static/gearUtils-04.js" type="text/javascript"></script>
-    </head>
-    <!-- 啟動 brython() -->
-    <body onload="brython()">
-        
-    <h1>cda_g2 40223106課程練習</h1>
-    <h2>第二組-組員名單</h2>
 
-    <table style="border:7px #008F00 double;" rules="all" cellpadding='7';>
-    <!-- "border:7px" 表示表格邊框粗細 -->
-    <!-- "#008F00"  表示表格邊框顏色  -->
-    <!--  色碼表 http://www.wibibi.com/info.php?tid=372 -->
-
-    <tr>
-    <td style='' align='center' valign="middle">組長</td>
-    <td style='' align='center' valign="middle">學號</td>
-    </tr>
-    <tr><td>陳柏安</td><td>40223131</td></tr>
-    <tr>
-    <td style='' align='center' valign="middle">組員</td>
-    <td style='' align='center' valign="middle">學號</td>
-    </tr>
-    <tr><td>吳佳容</td><td>40223102</td></tr>
-    <tr><td>林瑩禎</td><td>40223104</td></tr>
-    <tr><td>侯云婷</td><td>40223105</td></tr>
-    <tr><td>許芸瑄</td><td>40223106</td></tr>
-    <tr><td>黃雯琦</td><td>40223107</td></tr>
-    <tr><td>陳儀芳</td><td>40023107</td></tr>
-    </table>
-    <!--  align='center' 為水平置中 ，valign="middle" 為垂直置中 -->
-
-
-    <h1>cda_g2_w11 練習</h1>
-    <form method=POST action=index>
-    <a href="spur">spur</a><br />
-    <a href="drawspur">drawspur</a><br />
-    <a href="fileuploadform">上傳檔案</a><br />
-    <a href="download_list">列出上傳檔案</a><br />
+    <h1>a_40223106<h1>
 
     '''
         return outstring

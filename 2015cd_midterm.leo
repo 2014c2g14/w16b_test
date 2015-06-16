@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Created by Leo (http://leoeditor.com/leo_toc.html) -->
+<!-- Created by Leo: http://leoeditor.com/leo_toc.html -->
 <?xml-stylesheet ekr_test ?>
-<leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
+<leo_file xmlns:leo="http://leoeditor.com/namespaces/leo-python-editor/1.1" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
 <globals body_outline_ratio="0.5" body_secondary_ratio="0.5">
 	<global_window_position top="50" left="50" height="500" width="700"/>
@@ -111,6 +111,12 @@
 <v t="amd.20150508161156.1"><vh>problem3</vh></v>
 <v t="amd.20150508161218.1"><vh>problem4</vh></v>
 <v t="amd.20150508161237.1"><vh>problem5</vh></v>
+</v>
+</v>
+<v t="2015.20150616104831.1" a="E"><vh>Recovered Nodes</vh>
+<v t="2015.20150616104831.2"><vh>Recovered node "index" from @clean wsgi.py</vh>
+<v t="2015.20150616104831.3"><vh>old:index</vh></v>
+<v t="2015.20150616104831.4"><vh>new:index</vh></v>
 </v>
 </v>
 </vnodes>
@@ -292,6 +298,126 @@ QLineEdit#editorLabel {
 <t tx="2014fall.20141212095015.1786">horizontal: body pane to the left
 vertical: body pane on the botton</t>
 <t tx="2015.20150330144929.1714"></t>
+<t tx="2015.20150616104831.1"></t>
+<t tx="2015.20150616104831.2">(uncached) amd.20150503173602.1
+Diff...
+  @cherrypy.expose
+- def index(self, N=20 ,N1=20 , M=4, P=20,midx=400):
++ def index(self):
+      outstring = '''
+- &lt;!DOCTYPE html&gt; 
+- &lt;html&gt;
+- &lt;head&gt;
+- &lt;meta http-equiv="content-type" content="text/html;charset=utf-8"&gt;
+- &lt;!-- 載入 brython.js --&gt;
+- &lt;script type="text/javascript" src="/static/Brython3.1.1-20150328-091302/brython.js"&gt;&lt;/script&gt;
+- &lt;script src="/static/Cango2D.js" type="text/javascript"&gt;&lt;/script&gt;
+- &lt;script src="/static/gearUtils-04.js" type="text/javascript"&gt;&lt;/script&gt;
+- &lt;/head&gt;
+- &lt;!-- 啟動 brython() --&gt;
+- &lt;body onload="brython()"&gt;
+-     
+- &lt;h1&gt;cda_g2 40223106課程練習&lt;/h1&gt;
+- &lt;h2&gt;第二組-組員名單&lt;/h2&gt;
+  
++ a_40223106
++ &lt;h1&gt;  a_40223106 &lt;h1&gt;
+- &lt;table style="border:7px #008F00 double;" rules="all" cellpadding='7';&gt;
+- &lt;!-- "border:7px" 表示表格邊框粗細 --&gt;
+- &lt;!-- "#008F00"  表示表格邊框顏色  --&gt;
+- &lt;!--  色碼表 http://www.wibibi.com/info.php?tid=372 --&gt;
+- 
+- &lt;tr&gt;
+- &lt;td style='' align='center' valign="middle"&gt;組長&lt;/td&gt;
+- &lt;td style='' align='center' valign="middle"&gt;學號&lt;/td&gt;
+- &lt;/tr&gt;
+- &lt;tr&gt;&lt;td&gt;陳柏安&lt;/td&gt;&lt;td&gt;40223131&lt;/td&gt;&lt;/tr&gt;
+- &lt;tr&gt;
+- &lt;td style='' align='center' valign="middle"&gt;組員&lt;/td&gt;
+- &lt;td style='' align='center' valign="middle"&gt;學號&lt;/td&gt;
+- &lt;/tr&gt;
+- &lt;tr&gt;&lt;td&gt;吳佳容&lt;/td&gt;&lt;td&gt;40223102&lt;/td&gt;&lt;/tr&gt;
+- &lt;tr&gt;&lt;td&gt;林瑩禎&lt;/td&gt;&lt;td&gt;40223104&lt;/td&gt;&lt;/tr&gt;
+- &lt;tr&gt;&lt;td&gt;侯云婷&lt;/td&gt;&lt;td&gt;40223105&lt;/td&gt;&lt;/tr&gt;
+- &lt;tr&gt;&lt;td&gt;許芸瑄&lt;/td&gt;&lt;td&gt;40223106&lt;/td&gt;&lt;/tr&gt;
+- &lt;tr&gt;&lt;td&gt;黃雯琦&lt;/td&gt;&lt;td&gt;40223107&lt;/td&gt;&lt;/tr&gt;
+- &lt;tr&gt;&lt;td&gt;陳儀芳&lt;/td&gt;&lt;td&gt;40023107&lt;/td&gt;&lt;/tr&gt;
+- &lt;/table&gt;
+- &lt;!--  align='center' 為水平置中 ，valign="middle" 為垂直置中 --&gt;
+- 
+- 
+- &lt;h1&gt;cda_g2_w11 練習&lt;/h1&gt;
+- &lt;form method=POST action=index&gt;
+- &lt;a href="spur"&gt;spur&lt;/a&gt;&lt;br /&gt;
+- &lt;a href="drawspur"&gt;drawspur&lt;/a&gt;&lt;br /&gt;
+- &lt;a href="fileuploadform"&gt;上傳檔案&lt;/a&gt;&lt;br /&gt;
+- &lt;a href="download_list"&gt;列出上傳檔案&lt;/a&gt;&lt;br /&gt;
+  
+  '''
+      return outstring
+</t>
+<t tx="2015.20150616104831.3">@cherrypy.expose
+def index(self):
+    outstring = '''
+
+a_40223106
+&lt;h1&gt;  a_40223106 &lt;h1&gt;
+
+'''
+    return outstring
+</t>
+<t tx="2015.20150616104831.4">@cherrypy.expose
+def index(self, N=20 ,N1=20 , M=4, P=20,midx=400):
+    outstring = '''
+&lt;!DOCTYPE html&gt; 
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="content-type" content="text/html;charset=utf-8"&gt;
+&lt;!-- 載入 brython.js --&gt;
+&lt;script type="text/javascript" src="/static/Brython3.1.1-20150328-091302/brython.js"&gt;&lt;/script&gt;
+&lt;script src="/static/Cango2D.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="/static/gearUtils-04.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;!-- 啟動 brython() --&gt;
+&lt;body onload="brython()"&gt;
+    
+&lt;h1&gt;cda_g2 40223106課程練習&lt;/h1&gt;
+&lt;h2&gt;第二組-組員名單&lt;/h2&gt;
+
+&lt;table style="border:7px #008F00 double;" rules="all" cellpadding='7';&gt;
+&lt;!-- "border:7px" 表示表格邊框粗細 --&gt;
+&lt;!-- "#008F00"  表示表格邊框顏色  --&gt;
+&lt;!--  色碼表 http://www.wibibi.com/info.php?tid=372 --&gt;
+
+&lt;tr&gt;
+&lt;td style='' align='center' valign="middle"&gt;組長&lt;/td&gt;
+&lt;td style='' align='center' valign="middle"&gt;學號&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;陳柏安&lt;/td&gt;&lt;td&gt;40223131&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style='' align='center' valign="middle"&gt;組員&lt;/td&gt;
+&lt;td style='' align='center' valign="middle"&gt;學號&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;吳佳容&lt;/td&gt;&lt;td&gt;40223102&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;林瑩禎&lt;/td&gt;&lt;td&gt;40223104&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;侯云婷&lt;/td&gt;&lt;td&gt;40223105&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;許芸瑄&lt;/td&gt;&lt;td&gt;40223106&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;黃雯琦&lt;/td&gt;&lt;td&gt;40223107&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;陳儀芳&lt;/td&gt;&lt;td&gt;40023107&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;!--  align='center' 為水平置中 ，valign="middle" 為垂直置中 --&gt;
+
+
+&lt;h1&gt;cda_g2_w11 練習&lt;/h1&gt;
+&lt;form method=POST action=index&gt;
+&lt;a href="spur"&gt;spur&lt;/a&gt;&lt;br /&gt;
+&lt;a href="drawspur"&gt;drawspur&lt;/a&gt;&lt;br /&gt;
+&lt;a href="fileuploadform"&gt;上傳檔案&lt;/a&gt;&lt;br /&gt;
+&lt;a href="download_list"&gt;列出上傳檔案&lt;/a&gt;&lt;br /&gt;
+
+'''
+    return outstring
+</t>
 <t tx="amd.20150503172957.1"></t>
 <t tx="amd.20150503173008.1"># coding=utf-8
 # 上面的程式內容編碼必須在程式的第一或者第二行才會有作用
@@ -1764,8 +1890,7 @@ if (!newfile.Status) {
 def index(self):
     outstring = '''
 
-a_40223106
-&lt;h1&gt;  a_40223106 &lt;h1&gt;
+&lt;h1&gt;a_40223106&lt;h1&gt;
 
 '''
     return outstring
@@ -2266,7 +2391,8 @@ def cube(self, W=10):
 &lt;/html&gt;
 '''
 
-    return outstring</t>
+    return outstring
+</t>
 <t tx="office.20150504093053.1">@cherrypy.expose
 # W 為正方體邊長, 內定值為 10
 def cubeaction(self, W=10):
@@ -2357,7 +2483,8 @@ if (!ret.Status):
 &lt;/script&gt;
 '''
 
-    return outstring</t>
+    return outstring
+</t>
 <t tx="office.20150504100507.1"></t>
 <t tx="office.20150504100745.1"></t>
 <t tx="office.20150504100857.1"></t>
@@ -2417,7 +2544,8 @@ return 'downloads/';
 &lt;input type="button" onclick="$('.prova').axuploader('disable')" value="asd" /&gt;
 &lt;input type="button" onclick="$('.prova').axuploader('enable')" value="ok" /&gt;
 &lt;/section&gt;&lt;/body&gt;&lt;/html&gt;
-'''</t>
+'''
+</t>
 <t tx="office.20150504183312.1">@cherrypy.expose
 def fileaxupload(self, *args, **kwargs):
     filename = kwargs["ax-file-name"]
