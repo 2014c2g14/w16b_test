@@ -5024,7 +5024,8 @@ session.GetModelWindow (assembly).Repaint();
 <t tx="2015.20150616100330.1">@cherrypy.expose
 def index(self):
     outstring = '''
-     &lt;a href="a_40223106"&gt;a_40223106&lt;/a&gt;&lt;br /&gt;
+     &lt;a href="a_40223106"&gt;
+     a_40223106&lt;/a&gt;&lt;br /&gt;
  
 '''
     return outstring
