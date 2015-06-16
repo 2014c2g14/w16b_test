@@ -108,7 +108,7 @@ class Gear(object):
         outstring = '''
 <form id=entry method=post action="gear_width">
 請填妥下列參數，以完成適當的齒尺寸大小設計。<br />
-齒數:<input type=text name=n><br />
+齒數:<input type=text name=N><br />
 模數:<input type=text name=module><br />
 馬達馬力:<input type=text name=horsepower id=horsepower value=100 size=10>horse power<br />
 馬達轉速:<input type=text name=rpm id=rpm value=1120 size=10>rpm<br />
@@ -166,7 +166,7 @@ class Gear(object):
     #@+node:office.20150407074720.8: *3* gear_width
     # 改寫為齒面寬的設計函式
     @cherrypy.expose
-    def gear_width(self, horsepower=100, rpm=1000, ratio=4, toothtype=1, safetyfactor=2, material_serialno=1, npinion=18,n=None,module=None,pressangle=20):
+    def gear_width(self, horsepower=100, rpm=1000, ratio=4, toothtype=1, safetyfactor=2, material_serialno=1, npinion=18,N=None,module=None,pressangle=20):
         SQLite連結 = Store(SQLiteWriter(_curdir+"/lewis.db", frozen=True))
         outstring = ""
         # 根據所選用的齒形決定壓力角
@@ -262,26 +262,27 @@ class Gear(object):
             #outstring = self.cube_weblink()
             # 再載入 gear 程式測試
             
-             outstring = '''<script type="text/javascript" src="/static/weblink/pfcUtils.js"></script>
-    <script type="text/javascript" src="/static/weblink/wl_header.js">// <![CDATA[
+             outstring ='''
+    <script type="text/javascript" src="/static/weblink/pfcUtils.js"></script>
+    <script type="text/javascript" src="/static/weblink/wl_header.js">
     document.writeln ("Error loading Pro/Web.Link header!");
-    // ]]></script>
+    </script>
     <script type="text/javascript" language="JavaScript">// <![CDATA[
     if (!pfcIsWindows()) netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
     // 若第三輸入為 false, 表示僅載入 session, 但是不顯示
     // ret 為 model open return
-     var ret = document.pwl.pwlMdlOpen("gear.prt", "v:/", false);
+     var ret = document.pwl.pwlMdlOpen("gear.prt.1", "v:/tmp", false)
     if (!ret.Status) {
         alert("pwlMdlOpen failed (" + ret.ErrorCode + ")");
     }
         //將 ProE 執行階段設為變數 session
         var session = pfcGetProESession();
         // 在視窗中打開零件檔案, 並且顯示出來
-        var window = session.OpenFile(pfcCreate("pfcModelDescriptor").CreateFromFileName("gear.prt"));
-        var solid = session.GetModel("gear.prt",pfcCreate("pfcModelType").MDL_PART);
+        var window = session.OpenFile(pfcCreate("pfcModelDescriptor").CreateFromFileName("gear.prt.1");
+        var solid = session.GetModel("gear.prt.1",pfcCreate("pfcModelType").MDL_PART);
         var length,width,myf,myn,i,j,volume,count,d1Value,d2Value;
         // 將模型檔中的 length 變數設為 javascript 中的 length 變數
-        length = solid.GetParam("n");
+        length = solid.GetParam("N");
         // 將模型檔中的 width 變數設為 javascript 中的 width 變數
         width = solid.GetParam("face_width");
        module = solid.GetParam("module");
@@ -300,21 +301,22 @@ class Gear(object):
                 {
                     //for(j=0;j<=1;j++)
                     //{
-                        myf='''+str(n)+'''; //齒數
+                        myf='''+str(N)+'''; //齒數
                         myn='''+str(facewidth)+''';
                         mym='''+str(module)+''';//模數
                         myp = 20//標準壓力角
     // 設定變數值, 利用 ModelItem 中的 CreateDoubleParamValue 轉換成 Pro/Web.Link 所需要的浮點數值
              //d1Value = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(myf);
              d1Value = pfcCreate ("MpfcModelItem").CreateIntParamValue(myf);
-             d2Value = pfcCreate ("MpfcModelItem").CreateIntParamValue(myn);
-             d3Value = pfcCreate("MpfcModelItem").CreateIntParamValue(mym);
-            d4Value = pfcCreate ("MpfcModelItem").CreateIntParamValue(myp);
+             d2Value = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(myn);
+             d3Value = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(mym);
+              d4Value = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(myp);
+            
     // 將處理好的變數值, 指定給對應的零件變數
                         length.Value = d1Value;
                         width.Value = d2Value;
                         module.Value = d3Value;
-                        pressangle.Value = d3Value;
+                        pressangle.Value = d4Value;
                         //零件尺寸重新設定後, 呼叫 Regenerate 更新模型
                         solid.Regenerate(void null);
                         //利用 GetMassProperty 取得模型的質量相關物件
@@ -324,7 +326,7 @@ class Gear(object):
                         count = count + 1;
     alert("執行第"+count+"次,零件總體積:"+volume);
     // 將零件存為新檔案
-    var newfile = document.pwl.pwlMdlSaveAs("gear.prt", "v:/", "mygear_"+count+".prt");
+    var newfile = document.pwl.pwlMdlSaveAs("gear.prt.1", "v:/", "mygear_"+count+".prt");
     if (!newfile.Status) {
         alert("pwlMdlSaveAs failed (" + newfile.ErrorCode + ")");
     }
