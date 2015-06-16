@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Created by Leo: http://leoeditor.com/leo_toc.html -->
+<!-- Created by Leo (http://leoeditor.com/leo_toc.html) -->
 <?xml-stylesheet ekr_test ?>
-<leo_file xmlns:leo="http://leoeditor.com/namespaces/leo-python-editor/1.1" >
+<leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
 <globals body_outline_ratio="0.5" body_secondary_ratio="0.5">
 	<global_window_position top="50" left="50" height="500" width="700"/>
@@ -1775,40 +1775,7 @@ def index(self, N=20 ,N1=20 , M=4, P=20,midx=400):
 &lt;!-- 啟動 brython() --&gt;
 &lt;body onload="brython()"&gt;
     
-&lt;h1&gt;cda_g2 40223106課程練習&lt;/h1&gt;
-&lt;h2&gt;第二組-組員名單&lt;/h2&gt;
-
-&lt;table style="border:7px #008F00 double;" rules="all" cellpadding='7';&gt;
-&lt;!-- "border:7px" 表示表格邊框粗細 --&gt;
-&lt;!-- "#008F00"  表示表格邊框顏色  --&gt;
-&lt;!--  色碼表 http://www.wibibi.com/info.php?tid=372 --&gt;
-
-&lt;tr&gt;
-&lt;td style='' align='center' valign="middle"&gt;組長&lt;/td&gt;
-&lt;td style='' align='center' valign="middle"&gt;學號&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;陳柏安&lt;/td&gt;&lt;td&gt;40223131&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style='' align='center' valign="middle"&gt;組員&lt;/td&gt;
-&lt;td style='' align='center' valign="middle"&gt;學號&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;吳佳容&lt;/td&gt;&lt;td&gt;40223102&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;林瑩禎&lt;/td&gt;&lt;td&gt;40223104&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;侯云婷&lt;/td&gt;&lt;td&gt;40223105&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;許芸瑄&lt;/td&gt;&lt;td&gt;40223106&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;黃雯琦&lt;/td&gt;&lt;td&gt;40223107&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;陳儀芳&lt;/td&gt;&lt;td&gt;40023107&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-&lt;!--  align='center' 為水平置中 ，valign="middle" 為垂直置中 --&gt;
-
-
-&lt;h1&gt;cda_g2_w11 練習&lt;/h1&gt;
-&lt;form method=POST action=index&gt;
-&lt;a href="spur"&gt;spur&lt;/a&gt;&lt;br /&gt;
-&lt;a href="drawspur"&gt;drawspur&lt;/a&gt;&lt;br /&gt;
-&lt;a href="fileuploadform"&gt;上傳檔案&lt;/a&gt;&lt;br /&gt;
-&lt;a href="download_list"&gt;列出上傳檔案&lt;/a&gt;&lt;br /&gt;
-
+&lt;h1&gt;  a_40223106 &lt;h1&gt;
 '''
     return outstring
 </t>
