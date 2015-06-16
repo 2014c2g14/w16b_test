@@ -1761,21 +1761,12 @@ if (!newfile.Status) {
 </t>
 <t tx="amd.20150503173429.1"></t>
 <t tx="amd.20150503173602.1">@cherrypy.expose
-def index(self, N=20 ,N1=20 , M=4, P=20,midx=400):
+def index(self):
     outstring = '''
-&lt;!DOCTYPE html&gt; 
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv="content-type" content="text/html;charset=utf-8"&gt;
-&lt;!-- 載入 brython.js --&gt;
-&lt;script type="text/javascript" src="/static/Brython3.1.1-20150328-091302/brython.js"&gt;&lt;/script&gt;
-&lt;script src="/static/Cango2D.js" type="text/javascript"&gt;&lt;/script&gt;
-&lt;script src="/static/gearUtils-04.js" type="text/javascript"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;!-- 啟動 brython() --&gt;
-&lt;body onload="brython()"&gt;
-    
+
+a_40223106
 &lt;h1&gt;  a_40223106 &lt;h1&gt;
+
 '''
     return outstring
 </t>
